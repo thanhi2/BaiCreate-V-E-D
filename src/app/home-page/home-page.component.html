@@ -1,0 +1,27 @@
+
+<h1>Angular 12 CRUD Example - ItSolutionStuff.com</h1>
+<button class="p-2 bg-success " routerLink="/Create">Create New Post </button>
+<table class="table table-borderless">
+  
+      <thead>
+        <tr>
+          <th scope="col">ID</th>
+          <th scope="col">Title</th>
+          <th scope="col">Body</th>
+          <th scope="col">Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let Posts of post">
+          <th scope="row">{{Posts.id}}</th>
+          <td>{{Posts.title}}</td>
+          <td>{{Posts.body}}</td>
+          <td>
+            <button routerLink="/View/{{Posts.id}}">View</button>
+            <button routerLink="/Edit/{{Posts.id}}">Edit</button>
+            <button type="button" class="delete" title="delete"(click)="delete(Posts)">Delete</button>
+          </td>
+        </tr>
+    
+      </tbody>
+    </table>

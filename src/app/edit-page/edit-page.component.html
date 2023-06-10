@@ -1,0 +1,19 @@
+<h2>Update Post</h2>
+    <form *ngIf="Post">
+        <div class="form-group">
+            <label for="exampleFormControlInput1">Title:</label>
+            <button class="d-flex" (click)="goBack()">Back</button>
+            <input type="email" class="form-control" name="title"id="exampleFormControlInput1" placeholder="This is my title" [(ngModel)]="Post.title">
+            
+        </div>
+        
+        <div class="form-group">
+            <label for="exampleFormControlTextarea1">Body</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" name="body" rows="3" [(ngModel)]="Post.body"></textarea>
+        </div>
+
+        <div>
+            <button (click)="putUpdate()">Update</button>
+        </div>
+    </form>
+    

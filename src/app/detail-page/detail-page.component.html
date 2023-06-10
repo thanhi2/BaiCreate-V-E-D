@@ -1,0 +1,16 @@
+<h2>View Post</h2>
+<div *ngIf="Post">
+    <div class="d-flex justify-content-between">
+        <div>ID:</div>
+        <div>
+            <button class="d-flex " (click)="goBack()">Back</button>
+        </div>
+    </div>
+        <table class="table-borderless">{{Post.id}}</table>
+        <h5 class="alert-heading">Title:</h5>
+        <p>{{Post.title}}</p>
+        <h5 class="alert-heading">Body:</h5>
+        <p class="mb-0">{{Post.body}}</p>
+    
+</div>
+    
